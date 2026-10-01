@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap');
+
+:root{color-scheme:dark;--black:#000;--navy:#0c2c53;--page-blue:#071a30;--silver:#bfc5d3;--white:#fff;--line:rgb(191 197 211 / .22);--soft-line:rgb(191 197 211 / .12);--display:Manrope,Arial,sans-serif;--body:'DM Sans',Arial,sans-serif}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+body{margin:0;background-color:var(--page-blue);background-image:radial-gradient(circle,rgb(191 197 211 / .1) .55px,transparent .85px),radial-gradient(ellipse 58% 52% at 76% 22%,rgb(31 83 137 / .48),transparent 78%),radial-gradient(ellipse 42% 39% at 59% 76%,rgb(76 123 166 / .16),transparent 82%),radial-gradient(ellipse 48% 48% at 13% 62%,rgb(17 63 108 / .36),transparent 82%);background-size:4px 4px,100% 100%,100% 100%,100% 100%;background-attachment:fixed;color:var(--white);font-family:var(--body);-webkit-font-smoothing:antialiased}
+body.menu-open{overflow:hidden}
+button{font:inherit;cursor:pointer}
+a{color:inherit;text-decoration:none}
+button:focus-visible,a:focus-visible{outline:2px solid var(--silver);outline-offset:4px}
+::selection{background:var(--silver);color:var(--black)}
+.skip-link{position:absolute;z-index:50;top:-60px;left:20px;padding:12px 16px;background:var(--white);color:var(--black)}
+.skip-link:focus{top:16px}
+.section-shell{width:min(100% - 96px,1260px);margin-inline:auto}
+.eyebrow,.card-index{font-size:10px;font-weight:700;letter-spacing:.2em;line-height:1.6;color:var(--silver)}
+h1,h2,h3,p{overflow-wrap:break-word}
+h1,h2,h3{font-family:var(--display)}
+.section-intro{max-width:850px;margin-bottom:30px}
+.section-intro .eyebrow{margin:0 0 15px}
+.section-intro h2{font-size:clamp(38px,4vw,62px);line-height:1.08;letter-spacing:-.068em;margin:0;font-weight:700}
+.section-intro>p:last-child:not(.eyebrow){max-width:650px;color:var(--silver);font-size:16px;line-height:1.62;margin:18px 0 0}
+
+/* Navigation stays compact so the business content remains the focus. */
+.site-header{height:76px;padding:0 max(48px,calc((100% - 1260px)/2));display:flex;align-items:center;gap:30px;border-bottom:1px solid var(--soft-line);background:rgb(5 19 36 / .94);position:sticky;top:0;z-index:30;backdrop-filter:blur(12px)}
+.wordmark{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;font-family:var(--display);font-size:19px;font-weight:800;letter-spacing:-.075em;line-height:1}
+.wordmark img{width:34px;height:34px;object-fit:contain;filter:brightness(0) invert(1)}
+.wordmark strong{font-weight:500}
+.desktop-nav{display:flex;align-items:center;gap:33px;margin-left:auto;color:var(--silver);font-size:13px;font-weight:600}
+.desktop-nav a,.site-footer a{transition:color .2s ease}
+.desktop-nav a:hover,.site-footer a:hover{color:var(--white)}
+.menu-toggle,.mobile-nav{display:none}
+
+/* Diffuse light and a fine dot grain follow the reference's texture, using PixelForge colors. */
+.hero{position:relative;isolation:isolate;overflow:hidden}
+.hero-inner{display:grid;grid-template-columns:.82fr 1.18fr;align-items:center;gap:5%;padding-top:32px;padding-bottom:48px}
+.hero-copy{position:relative;z-index:2}
+.hero-copy .eyebrow{margin:0 0 23px}
+.hero h1{font-size:clamp(66px,6vw,92px);font-weight:800;line-height:.98;letter-spacing:-.088em;margin:0 0 26px}
+.hero-dot{color:var(--silver)}
+.hero-lede{font-size:clamp(20px,1.7vw,25px);line-height:1.45;letter-spacing:-.025em;max-width:500px;margin:0 0 20px}
+.hero-support{font-size:15px;line-height:1.6;color:var(--silver);max-width:430px;margin:0 0 25px}
+.quiet-link{display:inline-flex;align-items:center;gap:18px;border-bottom:1px solid var(--silver);padding-bottom:8px;font-size:13px;font-weight:700;transition:gap .2s}
+.quiet-link:hover{gap:25px}
+.hero-visual{width:100%;aspect-ratio:822 / 529;min-width:0;border:1px solid var(--line);border-radius:17px;overflow:hidden;box-shadow:0 28px 70px rgb(0 0 0 / .35)}
+.hero-image{display:block;width:100%;height:100%;object-fit:cover}
+
+/* The about and purpose sections make the business proposal readable in small pieces. */
+.intro{display:grid;grid-template-columns:1fr 1fr;gap:11%;align-items:start;padding-top:72px;padding-bottom:76px;border-top:1px solid var(--soft-line)}
+.intro .section-intro{margin-bottom:0}
+.intro-copy{padding-top:22px}
+.intro-copy p{font-size:17px;line-height:1.7;color:var(--silver);margin:0 0 19px}
+.intro-copy p:first-child{font-size:20px;line-height:1.55;color:var(--white)}
+.purpose{display:grid;grid-template-columns:1fr 1fr;gap:18px;padding-bottom:80px}
+.purpose-card{min-height:260px;padding:29px 32px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(135deg,rgb(12 44 83 / .39),rgb(0 0 0 / .12) 72%)}
+.purpose-card h3{font-size:29px;line-height:1.16;letter-spacing:-.05em;margin:27px 0 15px}
+.purpose-card p{max-width:495px;color:var(--silver);font-size:15px;line-height:1.66;margin:0}
+.values{display:grid;grid-template-columns:.9fr 1.1fr;gap:10%;padding-top:72px;padding-bottom:85px;border-top:1px solid var(--line)}
+.values .section-intro{margin-bottom:0}
+.value-list{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.value-list li{display:grid;grid-template-columns:48px 1fr;gap:16px;padding:18px 0;border-bottom:1px solid var(--line)}
+.value-list li>span{font-size:11px;font-weight:700;color:var(--silver);padding-top:4px}
+.value-list h3{font-size:21px;letter-spacing:-.045em;margin:0 0 5px}
+.value-list p{color:var(--silver);font-size:14px;line-height:1.55;margin:0}
+
+/* Three service panels preserve the full service range without suggesting fictitious work. */
+.services{padding-top:72px;padding-bottom:90px;border-top:1px solid var(--line)}
+.service-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.service-card{min-width:0;border:1px solid var(--line);border-radius:8px;overflow:hidden;background:rgb(12 44 83 / .08)}
+.service-art{height:210px;position:relative;overflow:hidden;background:var(--navy)}
+.art-design{display:flex;align-items:end;padding:22px}
+.art-design span{position:relative;z-index:1;font-family:var(--display);font-weight:800;font-size:clamp(41px,4vw,60px);line-height:.89;letter-spacing:-.095em}
+.art-design i{position:absolute;width:60%;aspect-ratio:1;right:-16%;top:-44%;border:28px solid var(--silver);border-radius:50%}
+.art-edit{padding:25px 28px;background:var(--black)}
+.edit-screen{position:relative;height:130px;display:grid;place-items:center;overflow:hidden;border:1px solid var(--silver);background:linear-gradient(135deg,var(--navy),var(--black) 52%,var(--silver))}
+.edit-screen span{position:absolute;top:10px;left:11px;font-size:8px;font-weight:700;letter-spacing:.15em}
+.edit-screen b{width:45px;height:45px;display:grid;place-items:center;padding-left:3px;border:1px solid var(--white);border-radius:50%;font-size:13px;font-weight:400}
+.edit-track{display:flex;gap:4px;height:8px;margin-top:15px}
+.edit-track i{flex:1;background:var(--silver)}
+.edit-track i:nth-child(2),.edit-track i:nth-child(5){background:var(--navy)}
+.art-build{display:grid;place-items:center;padding:23px 30px}
+.browser-frame{width:87%;height:164px;border:1px solid var(--silver);background:var(--black);box-shadow:13px 13px 0 var(--silver)}
+.browser-top{height:25px;display:flex;align-items:center;gap:4px;padding:0 9px;border-bottom:1px solid var(--line)}
+.browser-top i{width:5px;height:5px;border:1px solid var(--silver);border-radius:50%}
+.browser-top span{margin:auto;padding-right:17px;font-size:7px;color:var(--silver)}
+.browser-frame strong{display:block;padding:29px 22px;font-family:var(--display);font-size:30px;line-height:1.05;letter-spacing:-.07em}
+.service-content{padding:25px 25px 30px}
+.service-content h3{font-size:25px;letter-spacing:-.055em;margin:8px 0 11px}
+.service-content p{color:var(--silver);font-size:14px;line-height:1.6;margin:0}
+
+/* The workflow keeps all eight stages visible and easy to scan. */
+.approach{padding:72px 0 90px;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.process-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;list-style:none;padding:0;margin:32px 0 0}
+.process-grid li{min-height:190px;padding:20px 20px 23px;border:1px solid var(--line);border-radius:7px;background:rgb(0 0 0 / .42)}
+.process-grid li>span{display:grid;place-items:center;width:35px;height:35px;border:1px solid var(--silver);border-radius:50%;color:var(--silver);font-size:10px;font-weight:700}
+.process-grid h3{font-size:18px;line-height:1.2;letter-spacing:-.045em;margin:21px 0 8px}
+.process-grid p{color:var(--silver);font-size:13px;line-height:1.55;margin:0}
+
+/* Prices show only the README's starting rates, with one short quotation note. */
+.pricing{padding-top:72px;padding-bottom:90px}
+.pricing-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:17px}
+.price-card{padding:26px 28px;border:1px solid var(--line);border-radius:8px;background:linear-gradient(140deg,rgb(12 44 83 / .22),transparent 62%)}
+.price-card h3{font-size:25px;letter-spacing:-.05em;margin:0 0 15px}
+.price-card dl{margin:0}
+.price-card dl>div{display:flex;justify-content:space-between;gap:20px;padding:13px 0;border-top:1px solid var(--line)}
+.price-card dt{font-size:14px;color:var(--silver)}
+.price-card dd{font-size:14px;font-weight:700;white-space:nowrap;margin:0}
+.timelines{display:grid;grid-template-columns:.85fr 1.15fr;gap:10%;padding-top:72px;padding-bottom:85px;border-top:1px solid var(--line)}
+.timeline-list{border-top:1px solid var(--line)}
+.timeline-list>div{display:flex;justify-content:space-between;gap:25px;padding:16px 0;border-bottom:1px solid var(--line);font-size:15px}
+.timeline-list span{color:var(--silver)}
+.timeline-list strong{white-space:nowrap;font-size:15px}
+.section-note{grid-column:2;color:var(--silver);font-size:13px;line-height:1.6;margin:-5px 0 0}
+
+/* Business operations and tools close the page with practical detail. */
+.operations{padding:72px 0 90px;border-top:1px solid var(--line)}
+.operations-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.operations-grid article{padding:25px 27px 30px}
+.operations-grid h3{font-size:23px;letter-spacing:-.05em;margin:20px 0 10px}
+.operations-grid p{max-width:500px;color:var(--silver);font-size:14px;line-height:1.6;margin:0}
+/* Frosted surfaces reveal and soften the existing dot texture behind each information card. */
+:is(.purpose-card,.service-card,.process-grid li,.price-card,.operations-grid article){background:radial-gradient(ellipse 100% 90% at var(--hover-x,8%) var(--hover-y,0%),var(--hover-glow,rgb(191 197 211 / .19)),transparent 70%),linear-gradient(140deg,rgb(191 197 211 / .08),rgb(12 44 83 / .18) 47%,rgb(0 0 0 / .2));border:1px solid rgb(191 197 211 / .4);border-radius:14px;box-shadow:inset 0 1px 0 rgb(255 255 255 / .22),inset 1px 0 0 rgb(255 255 255 / .06),0 12px 32px rgb(0 0 0 / .17);-webkit-backdrop-filter:blur(18px) saturate(125%);backdrop-filter:blur(18px) saturate(125%)}
+@media(hover:hover) and (pointer:fine){
+  :is(.purpose-card,.service-card,.process-grid li,.price-card,.operations-grid article){transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+  :is(.purpose-card,.service-card,.process-grid li,.price-card,.operations-grid article):hover{--hover-glow:rgb(107 169 224 / .27);border-color:rgb(191 216 239 / .72);box-shadow:inset 0 1px 0 rgb(255 255 255 / .28),0 18px 38px rgb(0 0 0 / .25)}
+}
+@media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
+  :is(.purpose-card,.service-card,.process-grid li,.price-card,.operations-grid article):hover{transform:translateY(-4px)}
+}
+.capabilities{display:grid;grid-template-columns:.8fr 1.2fr;gap:10%;padding-top:72px;padding-bottom:90px;border-top:1px solid var(--line)}
+.capability-columns{display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.capability-columns h3{font-size:20px;letter-spacing:-.05em;margin:0 0 15px}
+.capability-columns ul{list-style:none;padding:0;margin:0;border-top:1px solid var(--line)}
+.capability-columns li{padding:9px 0;border-bottom:1px solid var(--line);color:var(--silver);font-size:13px;line-height:1.5}
+.site-footer{padding:50px 0 27px;border-top:1px solid var(--line)}
+.footer-inner{display:grid;grid-template-columns:1fr 1fr;gap:45px}
+.footer-inner p{color:var(--silver);font-size:13px;margin:15px 0 0}
+.site-footer nav{display:flex;flex-wrap:wrap;align-content:start;justify-content:flex-end;gap:12px 25px;color:var(--silver);font-size:13px}
+.footer-inner small{grid-column:1/-1;border-top:1px solid var(--soft-line);padding-top:20px;color:var(--silver);font-size:12px}
+
+/* Keep wide, short browser windows compact without hiding section content. */
+@media(min-width:1200px) and (max-height:700px){
+  .intro,.values,.services,.pricing,.timelines,.capabilities{padding-top:40px;padding-bottom:48px}
+  .approach,.operations{padding:40px 0 48px}
+  .purpose{padding-bottom:48px}
+  .section-intro{margin-bottom:20px}
+  .section-intro .eyebrow{margin-bottom:9px}
+  .section-intro h2{font-size:clamp(38px,3.6vw,50px)}
+  .section-intro>p:last-child:not(.eyebrow){margin-top:10px;line-height:1.5}
+  .service-art{height:145px}
+  .art-edit{padding:14px 20px}
+  .edit-screen{height:92px}
+  .edit-track{margin-top:8px}
+  .art-build{padding:15px 24px}
+  .browser-frame{height:112px}
+  .browser-frame strong{padding:12px 16px;font-size:22px}
+  .service-content{padding:18px 20px 21px}
+  .service-content h3{font-size:22px;margin:5px 0 7px}
+  .service-content p{font-size:13px;line-height:1.48}
+  .process-grid{margin-top:20px;gap:12px}
+  .process-grid li{min-height:0;padding:15px 18px}
+  .process-grid h3{margin:12px 0 6px}
+  .pricing-grid,.operations-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+  .price-card,.operations-grid article{padding:20px}
+  .price-card dl>div{gap:8px}
+  .operations-grid h3{font-size:20px;margin:12px 0 8px}
+}
+
+@media(max-width:1050px){
+  .section-shell{width:calc(100% - 56px)}
+  .site-header{padding:0 28px}
+  .desktop-nav{gap:19px}
+  .hero-inner{gap:3%}
+  .hero h1{font-size:clamp(58px,6vw,76px)}
+  .hero-visual{height:auto}
+  .service-art{height:190px}
+  .art-design span{font-size:42px}
+  .process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .process-grid li{min-height:160px}
+}
+@media(max-width:760px){
+  html{scroll-padding-top:68px}
+  .section-shell{width:calc(100% - 40px)}
+  .site-header{height:68px;padding:0 20px}
+  .desktop-nav{display:none}
+  .menu-toggle{margin-left:auto;width:44px;height:44px;border:0;background:transparent;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:0}
+  .menu-toggle span{width:23px;height:1px;background:var(--white);transition:transform .2s}
+  .menu-toggle[aria-expanded="true"] span:first-child{transform:translateY(3.5px) rotate(45deg)}
+  .menu-toggle[aria-expanded="true"] span:last-child{transform:translateY(-3.5px) rotate(-45deg)}
+  .mobile-nav:not([hidden]){display:flex;position:absolute;top:68px;left:0;right:0;min-height:calc(100svh - 68px);background:var(--page-blue);flex-direction:column;padding:24px 20px 50px;border-top:1px solid var(--line)}
+  .mobile-nav a{font-family:var(--display);font-size:clamp(32px,8vw,48px);letter-spacing:-.06em;padding:12px 0;border-bottom:1px solid var(--line)}
+  .hero-inner{grid-template-columns:1fr;padding-top:48px;padding-bottom:60px}
+  .hero h1{font-size:clamp(57px,9vw,76px)}
+  .hero-visual{width:min(100%,600px);margin:32px auto 0}
+  .intro,.values,.timelines,.capabilities{grid-template-columns:1fr;gap:25px}
+  .intro,.values,.services,.pricing,.timelines,.capabilities{padding-top:60px;padding-bottom:72px}
+  .purpose{padding-bottom:72px}
+  .values .section-intro{margin-bottom:15px}
+  .service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .service-card:last-child{grid-column:1/-1}
+  .service-art{height:205px}
+  .approach,.operations{padding:60px 0 72px}
+  .section-note{grid-column:1;margin:0}
+}
+@media(max-width:560px){
+  .wordmark{font-size:18px}
+  .section-intro h2{font-size:clamp(35px,9vw,47px)}
+  .hero-inner{padding-top:36px;padding-bottom:48px}
+  .hero h1{font-size:clamp(54px,11.3vw,67px)}
+  .hero-lede{font-size:19px}
+  .hero-visual{margin-top:28px;border-radius:12px}
+  .intro-copy{padding-top:0}
+  .intro-copy p:first-child{font-size:18px}
+  .intro-copy p{font-size:16px}
+  .purpose,.service-grid,.pricing-grid,.operations-grid,.capability-columns{grid-template-columns:1fr}
+  .purpose{gap:14px}
+  .purpose-card{min-height:0;padding:24px}
+  .purpose-card h3{font-size:26px;margin-top:22px}
+  .service-card:last-child{grid-column:auto}
+  .service-art{height:205px}
+  .art-design span{font-size:54px}
+  .process-grid{grid-template-columns:1fr;gap:10px}
+  .process-grid li{min-height:0}
+  .operations-grid{gap:12px}
+  .price-card{padding:23px}
+  .timeline-list>div{font-size:14px}
+  .timeline-list strong{font-size:14px}
+  .capability-columns{gap:30px}
+  .footer-inner{grid-template-columns:1fr;gap:26px}
+  .site-footer nav{justify-content:flex-start}
+}
+@media(max-width:370px){.hero h1{font-size:49px}.art-design span{font-size:47px}}
+@media(prefers-reduced-motion:no-preference){
+  body.reveal-enabled main>section{transition:opacity .7s ease,transform .7s cubic-bezier(.22,1,.36,1)}
+  body.reveal-enabled main>section:not(.is-visible){opacity:0;transform:translateY(18px)}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
